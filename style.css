@@ -7,6 +7,11 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    color: black;
+}
+
+div{
+    transition: background-color 1s cubic-bezier(0.215, 0.610, 0.355, 1),color 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
 .one{
@@ -24,7 +29,8 @@ body{
 }
 
 .two{
-    background-color:royalblue;
+    --bg:rgb(34, 132, 231);
+    background-color:var(--bg);
     display: flex;
     justify-content: space-around;
     .subsec{
@@ -42,7 +48,8 @@ body{
 }
 
 .three {
-    background-color: greenyellow;
+    --bg: greenyellow;
+    background-color: var(--bg);
     padding: 30vh 0;
     h3{
         font-size: 6vh;
@@ -54,6 +61,21 @@ body{
         font-size: 3vh;
         font-weight: 300;
         margin: 0;
+    }
+}
+
+.four{
+    --bg: coral;
+    background-color: var(--bg);
+    padding: 20vh 0;
+    h2{
+        font-size: 5vh;
+        margin: 0;
+        padding: 0;
+        height: 7.5vh;
+    }
+    p{
+        font-size: 2vh;
     }
     button{
         margin: 1vh;
@@ -68,12 +90,87 @@ body{
 
     button:hover{
         background-color: black;
-        color: greenyellow;
+        color: var(--bg);
     }
 
     button:active{
         background-color: #444;
         border-color: #444;
+        scale: 0.9;
+    }
+}
+
+.five {
+    --bg: aquamarine;
+    background-color: var(--bg);
+    padding: 40vh 0;
+    background-size: cover;
+    background-position: center;
+    h2{
+        font-size: 5vh;
+        margin: 0;
+        padding: 0;
+        height: 5vh;
+    }
+    p{
+        font-size: 2vh;
+    }
+
+    button{
+        margin: 1vh;
+        font-size: 2vh;
+        padding: 0.5vh 2vh;
+        margin: 2vh 0;
+        border: solid black;
+        background-color: transparent;
+        transition: background 0.5s cubic-bezier(0.19, 1, 0.22, 1),scale 0.05s cubic-bezier(0.19, 1, 0.22, 1);
+        pointer-events: all;
+    }
+
+    button:hover{
+        background-color: black;
+        color: white;
+    }
+
+    button:active{
+        background-color: #444;
+        border-color: #444;
+        scale: 0.9;
+    }
+}
+
+.dark-mode{
+    color: white;
+    .one{
+        background-color: slategray;
+    }
+    .two{
+        background-color: darkslateblue;
+        .subsec{
+            background-color: slateblue;
+        }
+    }
+    .three{
+        --bg: darkslategray;
+    }
+    .four{
+        --bg:darkslateblue;
+    }
+    .five{
+        --bg: darkcyan;
+    }
+    button{
+        border-color: white;
+        color: white;
+    }
+    button:hover{
+        background-color: white;
+        color: black;
+    }
+
+    button:active{
+        background-color: #ccc;
+        border-color: #ccc;
         scale: 0.9;
     }
 }
